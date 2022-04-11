@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="nav">
+    <div> <a href="./index.html">Home</a> </div>
+    <div><a href="./allContacts.html">Contact List</a></div>
+    <div><a href="./favourites.html">Favourites</a></div>
+    </div>
+    <div>
+        <table id="cT">
+            <th>Contact Name</th>
+            <th>Mobile Number</th>
+            <th>Type</th>
+        </table>
+    </div>
+</body>
+<script>
+     if (localStorage.getItem("favourites") !== undefined){
+        fav = JSON.parse(localStorage.getItem("favourites"));
+        fav.forEach(element => {
+            var row = document.createElement("tr");
+            var nameData = document.createElement("td");
+            nameData.innerText = element.Name;
+            var numberData = document.createElement("td");
+            numberData.innerText = element.Mobile;
+            var typeData = document.createElement("td");
+            typeData.innerText = element.Type;
+            row.append(nameData, numberData, typeData);
+            document.getElementById("cT").append(row);
+
+        });
+     }
+        
+</script>
+</html>
