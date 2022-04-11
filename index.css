@@ -14,3 +14,35 @@ body{
     font-size: 30px;
     font-weight: bolder;
 }
+
+#form{
+    text-align: center;
+    width:20%;
+    margin: auto;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    padding: 3%;
+    margin-top: 5%;
+}
+#cT{
+    text-align: center;
+    width:50%;
+    margin: auto;
+    box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
+    padding: 3%;
+    margin-top: 5%;
+}   
+table,th,td {
+    border: 1px solid black;
+}
+#form1>input,select{
+    padding: 1%;
+    margin: 3%;
+}
+#sBT{
+    padding: 3%;
+    font-size: 20px;
+}

@@ -31,7 +31,7 @@
         if (localStorage.getItem("favourites") == undefined) var fav = [];
         else fav = JSON.parse(localStorage.getItem("favourites"));
 
-        contactsObj.forEach(element,i => {
+        contactsObj.forEach(function(element,i) {
             var row = document.createElement("tr");
             var nameData = document.createElement("td");
             nameData.innerText = element.Name;
@@ -40,18 +40,21 @@
             var typeData = document.createElement("td");
             typeData.innerText = element.Type;
             
+            
             var addToFavBT=document.createElement("button");
             addToFavBT.innerText="Add to Favourites"
-            addToFavBT.setAttribute("onclick",BT + i());
-            function BT+i(){
+            addToFavBT.setAttribute("class","BT");
+
+            row.append(nameData, numberData, typeData,addToFavBT);
+            document.getElementById("cT").append(row);
+            
+            addToFavBT.addEventListener("click",function(){
                 console.log("zzzz");
                 fav.push(element);
                 localStorage.setItem("favourites", JSON.stringify(fav));
             }
-
-            row.append(nameData, numberData, typeData,addToFavBT);
-            document.getElementById("cT").append(row)
-
+)
+            
         });
 </script>
 </html>
